@@ -206,6 +206,30 @@ body::after{animation:none;inset:0;opacity:.05}
 @media(max-width:480px){.top img{height:42px}#lgb{height:42px;padding:0 13px}.burger{width:42px;height:42px}.top{padding-top:calc(8px + env(safe-area-inset-top))}.arc{width:96vw}
 .menu{clip-path:circle(0 at calc(100% - 39px) 30px)}.menu.o{clip-path:circle(150vmax at calc(100% - 39px) 30px)}}
 @media(hover:none){.card:hover{transform:none;box-shadow:none;border-color:#c9a24b30}.card:hover .im img{transform:none}.btn:not(.f):hover{color:var(--g2)}.btn:not(.f):hover::before{transform:translateX(-101%)}.fab a:hover{background:#0a0a0cd9;transform:none}.fab a:hover svg{fill:var(--g2)}.gal img:hover{filter:none}#lgb:hover{background:#0a0a0ccc;color:var(--g2)}}
+
+/* ===== iOS / WEBKIT COMPATIBILITY ===== */
+@supports (-webkit-touch-callout:none){
+/* Force fixed/overlay elements onto their own GPU layer so Safari doesn't
+   leave stale ("ghost") frames of them behind during momentum scrolling. */
+.top,.fab,.pb,.bgv,.curt,.menu,.lb,#lgl{-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}
+/* The constantly-animating film-grain overlay is expensive to repaint on
+   iOS and is a common cause of tearing/ghosting; disable it there. */
+body::after{display:none}
+/* Blur filters inside entrance animations are costly to composite on iOS
+   and can leave visible artifacts; drop the blur, keep the fade/slide. */
+@keyframes arc{from{opacity:0;clip-path:inset(0 50% 0 50%)}}
+@keyframes lg{from{opacity:0;transform:scale(1.14) translateY(24px)}}
+@keyframes hd{from{opacity:0;clip-path:inset(0 50% 0 50%)}}
+@keyframes rvi{from{opacity:0;transform:translateY(70px)}}
+.card.in .im img{animation:none}
+.ph::before{animation:none;transform:none}
+/* Momentum-scroll elastic bounce can reveal the fixed video layer's edge;
+   pin the background so it never shows through. */
+html,body{background:#050506}
+}
+/* iOS reports 100vh taller than the visible area (address-bar chrome);
+   use the safer dynamic unit anywhere full-height blocks are used. */
+@supports (height:100dvh){.hero{min-height:100dvh}}
 </style>
 </head>
 <body>
@@ -218,7 +242,7 @@ body::after{animation:none;inset:0;opacity:.05}
 
 <main id="home">
 <section class="hero"><canvas id="cv"></canvas><div class="hc" id="hc">
-<svg class="arc" viewBox="0 0 640 235"><defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#a67c2e"/><stop offset=".5" stop-color="#f3dc9a"/><stop offset="1" stop-color="#a67c2e"/></linearGradient><path id="ap" d="M 30 225 A 290 290 0 0 1 610 225"/></defs><text fill="url(#gg)" font-family="Cinzel,serif" font-size="21" letter-spacing="2"><textPath href="#ap" startOffset="50%" text-anchor="middle" textLength="850" lengthAdjust="spacing">Every Client Is Royalty – Every Property Is a Palace</textPath></text></svg>
+<svg class="arc" viewBox="0 0 640 235"><defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#a67c2e"/><stop offset=".5" stop-color="#f3dc9a"/><stop offset="1" stop-color="#a67c2e"/></linearGradient><path id="ap" d="M 30 225 A 290 290 0 0 1 610 225"/></defs><text fill="url(#gg)" font-family="Cinzel,serif" font-size="18" letter-spacing="1.4"><textPath href="#ap" startOffset="50%" text-anchor="middle" textLength="600" lengthAdjust="spacingAndGlyphs">Every Client Is Royalty – Every Property Is a Palace</textPath></text></svg>
 <img class="logo" id="yp" alt="Y.P Luxury Estates"><div class="cue">Scroll<b></b></div></div></section>
 <div class="sep rv"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="ln" d="M0 100 C400 -10 1040 -10 1440 100"/><path d="M0 100 C400 -10 1040 -10 1440 100 L1440 130 L0 130Z" fill="#121216"/></svg></div>
 <section class="sec" id="properties"><div class="wrap"><div class="sh rv"><small>The Collection</small><h2 class="gold">Exclusive Properties</h2><i></i></div><div class="grid" id="cards"></div></div></section>
