@@ -211,7 +211,6 @@ body::after{animation:none;inset:0;opacity:.05}
 @supports (-webkit-touch-callout:none){
 /* Force fixed/overlay elements onto their own GPU layer so Safari doesn't
    leave stale ("ghost") frames of them behind during momentum scrolling. */
-.top,.fab,.pb,.bgv,.curt,.menu,.lb,#lgl{-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}
 /* The constantly-animating film-grain overlay is expensive to repaint on
    iOS and is a common cause of tearing/ghosting; disable it there. */
 body::after{display:none}
