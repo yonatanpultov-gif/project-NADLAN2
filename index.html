@@ -387,6 +387,7 @@ $('#sb').onclick=()=>{
  if(ph.length<9||ph.length>13)return m.textContent=tr('Please enter a valid phone number.');
  try{const b=bk();b.push({d:key(sd),t:st,n:nm,p:ph});localStorage.setItem('armon_bk',JSON.stringify(b))}catch(e){}
  const txt=`Hello, I'd like to book an appointment on ${sd.toLocaleDateString('en-GB')} at ${st}. Name: ${nm}, Phone: ${ph}`;
+ const wu=wa(txt);const ww=window.open(wu,'_blank');if(!ww)location.href=wu;
  m.className='msg';m.innerHTML=`${tr('Thank you')}, ${nm.replace(/</g,'')}! ${tr('Your request for')} <b>${sd.toLocaleDateString(LOC)} · ${st}</b> ${tr('is saved. Confirm it instantly:')} <a class="gold" target="_blank" rel="noopener" href="${wa(txt)}">${tr('Send via WhatsApp →')}</a>`;
  slots();
 };
