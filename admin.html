@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>ניהול האתר · ארמון</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#c9a24b;--g2:#f1d98f;--bg:#0a0a0c;--p:#121216;--in:#17171c;--t:#e9e4d8;--m:#9b968a;--err:#e28b8b;--ok:#7fd1a0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--t);font:400 16px/1.6 'Heebo',system-ui,-apple-system,sans-serif;min-height:100vh;padding:env(safe-area-inset-top) 0 calc(96px + env(safe-area-inset-bottom))}
+.wrap{max-width:820px;margin:auto;padding:0 16px}
+h1{font-size:22px;font-weight:700;color:var(--g2)}
+h2{font-size:18px;font-weight:500;color:var(--g2);margin:26px 0 12px;padding-bottom:8px;border-bottom:1px solid #c9a24b40}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:18px 0 10px}
+.top small{display:block;color:var(--m);font-size:13px;font-weight:300}
+.card{background:var(--p);border:1px solid #c9a24b30;border-radius:10px;padding:18px;margin:14px 0}
+.center{max-width:460px;margin:7vh auto 0}
+label{display:block;color:var(--g);font-size:14px;margin:14px 0 6px}
+.hint{color:var(--m);font-size:13px;margin-top:5px;font-weight:300}
+input,textarea{width:100%;background:var(--in);border:1px solid #c9a24b40;border-radius:8px;color:var(--t);font:inherit;font-size:16px;padding:12px 14px;outline:none}
+input:focus,textarea:focus{border-color:var(--g)}
+textarea{resize:vertical;min-height:90px}
+button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid var(--g);background:transparent;color:var(--g2);padding:10px 16px;min-height:44px;font-size:15px;transition:.2s}
+button:hover{background:#c9a24b22}
+button:disabled{opacity:.4;cursor:not-allowed}
+button.gold{background:linear-gradient(90deg,#a67c2e,#f1d98f);color:#0a0a0c;border-color:transparent;font-weight:700}
+button.gold:hover{filter:brightness(1.08)}
+button.danger{border-color:#b55;color:var(--err)}
+button.small{min-height:36px;padding:6px 12px;font-size:14px}
+button.big{width:100%;margin-top:16px;min-height:50px;font-size:17px}
+button.link{border:none;background:none;color:var(--m);text-decoration:underline;min-height:auto;padding:6px}
+.tabs{display:flex;gap:6px;border-bottom:1px solid #c9a24b30;margin:6px 0 4px;overflow-x:auto}
+.tab{border:none;border-radius:8px 8px 0 0;color:var(--m);padding:12px 18px;white-space:nowrap}
+.tab.on{color:var(--g2);background:var(--p);border-bottom:2px solid var(--g)}
+.item{display:flex;gap:12px;align-items:center;background:var(--p);border:1px solid #c9a24b30;border-radius:10px;padding:10px;margin:10px 0;flex-wrap:wrap}
+.item .th{width:84px;height:64px;object-fit:cover;border-radius:6px;background:#000;flex:none}
+.item .meta{flex:1;min-width:160px}
+.item .meta b{display:block;font-weight:500}
+.item .meta span{color:var(--m);font-size:13px;display:block}
+.acts{display:flex;gap:6px;flex-wrap:wrap}
+.ltabs{display:flex;gap:6px;position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid #c9a24b30;overflow-x:auto}
+.ltab{white-space:nowrap}
+.ltab.on{background:var(--g);color:#0a0a0c;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-top:8px}
+.gi{background:var(--in);border:1px solid #c9a24b30;border-radius:8px;overflow:hidden}
+.gi img{width:100%;height:96px;object-fit:cover;display:block;background:#000}
+.gi div{display:flex;justify-content:space-between;padding:4px}
+.gi button{min-height:32px;padding:2px 10px;font-size:15px}
+.cover{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.cover img{width:140px;height:100px;object-fit:cover;border-radius:8px;background:#000;border:1px solid #c9a24b30}
+.sec{border:1px solid #c9a24b40;border-radius:10px;padding:14px;margin:14px 0;background:#0e0e12}
+.sech{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
+.row{display:grid;grid-template-columns:1fr 1.6fr auto;gap:8px;margin-top:10px;align-items:start;padding:10px;border:1px solid #c9a24b26;border-radius:8px;background:#121216}
+.row button{min-height:46px}
+@media(max-width:560px){.row{grid-template-columns:1fr auto}.row input:nth-child(2){grid-column:1/2}.row button{grid-row:1/3;grid-column:2}}
+#bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#0d0d10f2;border-top:1px solid var(--g);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center;justify-content:center;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+#bar .st{color:var(--m);font-size:14px;flex:1;min-width:0}
+#bar .st.dirty{color:var(--g2)}
+#busy{position:fixed;inset:0;z-index:50;background:#000c;display:none;place-items:center;text-align:center;padding:30px}
+#busy.on{display:grid}
+#busy .box{max-width:340px}
+.spin{width:42px;height:42px;border:3px solid #c9a24b44;border-top-color:var(--g);border-radius:50%;animation:sp 1s linear infinite;margin:0 auto 16px}
+@keyframes sp{to{transform:rotate(360deg)}}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(86px + env(safe-area-inset-bottom));z-index:60;background:#1b1b20;border:1px solid var(--g);border-radius:10px;padding:12px 18px;max-width:92vw;display:none;box-shadow:0 8px 30px #000a}
+#toast.on{display:block}
+#toast.err{border-color:#b55;color:var(--err)}
+#toast.ok{border-color:#4a9;color:var(--ok)}
+ol.steps{padding-inline-start:20px;color:#cfc9bb;font-size:15px}
+ol.steps li{margin:6px 0}
+a{color:var(--g2)}
+details{margin-top:14px;color:var(--m)}summary{cursor:pointer}
+code{background:var(--in);padding:1px 6px;border-radius:4px;direction:ltr;unicode-bidi:embed;font-size:14px}
+.ltr{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="busy"><div class="box"><div class="spin"></div><div id="busyt"></div></div></div>
+<div id="toast"></div>
+
+<script>
+'use strict';
+const $=s=>document.querySelector(s);
+const LANGS=[['he','עברית'],['en','English'],['ru','Русский'],['fr','Français']];
+const KEY='armon_admin_v1';
+const S={screen:'boot',cfg:null,token:null,base:'',content:null,sha:null,orig:null,pending:{},previews:{},dirty:false,tab:'props',edit:-1,lang:'he',setupMode:'new'};
+const clone=o=>JSON.parse(JSON.stringify(o));
+const Lm=(he='',en='',ru='',fr='')=>({he,en,ru,fr});
+const tl=o=>!o?'':(o.he||o.en||o.ru||o.fr||'');
+
+/* ---------- tiny DOM helper ---------- */
+function h(tag,attrs,...kids){
+  const e=document.createElement(tag);
+  for(const k in (attrs||{})){const v=attrs[k];if(v==null||v===false)continue;
+    if(k==='class')e.className=v;else if(k.startsWith('on'))e[k]=v;else e.setAttribute(k,v===true?'':v)}
+  for(const c of kids.flat(Infinity)){if(c==null||c===false)continue;e.append(c.nodeType?c:document.createTextNode(c))}
+  return e}
+const btn=(t,fn,cls)=>h('button',{type:'button',class:cls||'',onclick:fn},t);
+
+/* ---------- feedback ---------- */
+let tt;
+function toast(msg,type){const t=$('#toast');t.textContent=msg;t.className='on '+(type||'');clearTimeout(tt);tt=setTimeout(()=>t.className='',type==='err'?7000:4000)}
+function busy(msg){const b=$('#busy');if(msg){$('#busyt').textContent=msg;b.classList.add('on')}else b.classList.remove('on')}
+
+/* ---------- base64 / crypto ---------- */
+const u8b64=u=>{let s='';for(let i=0;i<u.length;i+=0x8000)s+=String.fromCharCode.apply(null,u.subarray(i,i+0x8000));return btoa(s)};
+const b64u8=b=>Uint8Array.from(atob(b),c=>c.charCodeAt(0));
+const strB64=t=>u8b64(new TextEncoder().encode(t));
+const b64Str=b=>new TextDecoder().decode(b64u8(b.replace(/\s/g,'')));
+async function deriveKey(pw,salt){
+  const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:310000,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['encrypt','decrypt'])}
+async function encryptToken(token,pw){
+  const salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12));
+  const k=await deriveKey(pw,salt);
+  const ct=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv},k,new TextEncoder().encode(token)));
+  return {salt:u8b64(salt),iv:u8b64(iv),ct:u8b64(ct)}}
+async function decryptToken(cfg,pw){
+  const k=await deriveKey(pw,b64u8(cfg.salt));
+  const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64u8(cfg.iv)},k,b64u8(cfg.ct));
+  return new TextDecoder().decode(pt)}
+const getSaved=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'null')}catch(e){return null}};
+
+/* ---------- GitHub API ---------- */
+function errText(st,j){
+  if(st===401)return 'המפתח (Token) לא תקין או שפג תוקפו. צור מפתח חדש והתחבר מחדש.';
+  if(st===403)return 'אין הרשאה, או שנשלחו יותר מדי בקשות. המתן דקה ונסה שוב (ובדוק שלמפתח יש הרשאת Contents: Read and write).';
+  if(st===404)return 'לא נמצא. בדוק את שם המשתמש/הריפו ואת הרשאות המפתח.';
+  if(st===409||st===422)return 'התנגשות בשמירה (הקובץ השתנה בינתיים). נסה לפרסם שוב.';
+  return (j&&j.message)||('שגיאה '+st)}
+async function ghRaw(method,url,body){
+  let r;
+  try{r=await fetch(url,{method,cache:'no-store',headers:Object.assign({Authorization:'Bearer '+S.token,Accept:'application/vnd.github+json'},body?{'Content-Type':'application/json'}:{}),body:body?JSON.stringify(body):undefined})}
+  catch(e){throw new Error('אין חיבור לאינטרנט, נסה שוב.')}
+  return r}
+async function gh(method,path,body){
+  const url='https://api.github.com/repos/'+encodeURIComponent(S.cfg.owner)+'/'+encodeURIComponent(S.cfg.repo)+'/contents/'+path.split('/').map(encodeURIComponent).join('/')+(method==='GET'?'?t='+Date.now():'');
+  const r=await ghRaw(method,url,body);
+  if(r.status===404&&method==='GET')return null;
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok){const e=new Error(errText(r.status,j));e.status=r.status;throw e}
+  return j}
+async function checkRepo(){
+  const r=await ghRaw('GET','https://api.github.com/repos/'+encodeURIComponent(S.cfg.owner)+'/'+encodeURIComponent(S.cfg.repo));
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error(errText(r.status,j));
+  if(j.permissions&&j.permissions.push===false)throw new Error('למפתח אין הרשאת כתיבה לריפו הזה. יש לסמן Contents: Read and write.')}
+
+/* ---------- content ---------- */
+function normProp(p){
+  p.id=p.id||('p'+Date.now().toString(36));p.price=p.price||'';p.cover=p.cover||'';p.imgs=p.imgs||[];
+  ['cap','t','s','i'].forEach(k=>{p[k]=Object.assign(Lm(),p[k]||{})});
+  p.secs=(p.secs||[]).map(s=>({t:Object.assign(Lm(),s.t||{}),p:Object.assign(Lm(),s.p||{}),it:(s.it||[]).map(x=>({l:Object.assign(Lm(),x.l||{}),v:Object.assign(Lm(),x.v||{})}))}));
+  return p}
+function normalize(){
+  const c=S.content;c.version=1;
+  c.site=Object.assign({phone:'054-584-1063',tel:'0545841063',wa:'972545841063'},c.site||{});
+  c.properties=(c.properties||[]).map(normProp)}
+async function loadContent(){
+  const f=await gh('GET',S.base+'content.json');
+  if(f){S.sha=f.sha;S.content=JSON.parse(b64Str(f.content))}else{S.sha=null;S.content={version:1,site:{},properties:[]}}
+  normalize();S.orig=clone(S.content);S.dirty=false}
+const imgsOf=c=>{const s=new Set();(c.properties||[]).forEach(p=>{if(p.cover)s.add(p.cover);(p.imgs||[]).forEach(i=>s.add(i))});return s};
+const previewSrc=p=>S.previews[p]||p||'';
+function setDirty(){S.dirty=true;updateBar()}
+const normWa=v=>{let d=String(v).replace(/\D/g,'');if(d.startsWith('00'))d=d.slice(2);if(d.startsWith('0'))d='972'+d.slice(1);return d};
+
+function validate(){
+  const e=[];
+  S.content.properties.forEach((p,i)=>{const n='נכס '+(i+1)+' ('+(tl(p.t)||'ללא שם')+')';
+    if(!tl(p.t))e.push(n+': חסרה כותרת');
+    if(!String(p.price).trim())e.push(n+': חסר מחיר');
+    if(!p.cover)e.push(n+': חסרה תמונה ראשית')});
+  return e}
+
+async function publish(){
+  const errs=validate();
+  if(errs.length){toast(errs[0]+(errs.length>1?' (ועוד '+(errs.length-1)+')':''),'err');return}
+  const c=S.content;
+  c.site.tel=String(c.site.phone||c.site.tel||'').replace(/[^\d+]/g,'');c.site.wa=normWa(c.site.wa||c.site.tel);
+  try{
+    const used=imgsOf(c),up=Object.keys(S.pending).filter(p=>used.has(p));
+    for(let i=0;i<up.length;i++){
+      busy('מעלה תמונה '+(i+1)+' מתוך '+up.length+'…');
+      await gh('PUT',S.base+up[i],{message:'הוספת תמונה (לוח ניהול)',content:S.pending[up[i]]});
+      delete S.pending[up[i]]}
+    busy('שומר את התוכן…');
+    const body=()=>({message:'עדכון תוכן האתר (לוח ניהול)',content:strB64(JSON.stringify(c,null,1)),sha:S.sha||undefined});
+    let res;
+    try{res=await gh('PUT',S.base+'content.json',body())}
+    catch(e){
+      if(e.status===409||e.status===422){const f=await gh('GET',S.base+'content.json');S.sha=f?f.sha:null;res=await gh('PUT',S.base+'content.json',body())}
+      else throw e}
+    S.sha=res.content.sha;
+    busy('מנקה תמונות שהוסרו…');
+    const keep=imgsOf(c);
+    for(const p of imgsOf(S.orig)){
+      if(keep.has(p)||!p.startsWith('img/'))continue;
+      try{const f=await gh('GET',S.base+p);if(f)await gh('DELETE',S.base+p,{message:'הסרת תמונה (לוח ניהול)',sha:f.sha})}catch(e){}}
+    S.orig=clone(c);S.dirty=false;busy('');render();
+    toast('פורסם! השינויים יופיעו באתר תוך כדקה (אם לא רואים – רענון חזק לדף).','ok')
+  }catch(e){busy('');toast(e.message||'שגיאה בפרסום','err')}}
+
+async function discard(){
+  if(!confirm('לבטל את כל השינויים שלא פורסמו ולטעון מחדש את הגרסה שבאתר?'))return;
+  busy('טוען…');try{await loadContent();S.pending={};S.edit=-1;busy('');render()}catch(e){busy('');toast(e.message,'err')}}
+
+/* ---------- session ---------- */
+async function startSession(){
+  S.base=S.cfg.folder?S.cfg.folder.replace(/^\/+|\/+$/g,'')+'/':'';
+  busy('טוען את תוכן האתר…');
+  try{await checkRepo();await loadContent();S.screen='main';S.tab='props';S.edit=-1;busy('');render()}
+  catch(e){busy('');S.token=null;toast(e.message,'err');S.screen=getSaved()?'login':'setup';render()}}
+function logout(forget){
+  if(S.dirty&&!confirm('יש שינויים שלא פורסמו. להתנתק בכל זאת?'))return;
+  S.token=null;S.content=null;S.dirty=false;
+  if(forget)localStorage.removeItem(KEY);
+  S.screen=getSaved()?'login':'setup';render()}
+window.addEventListener('beforeunload',e=>{if(S.dirty){e.preventDefault();e.returnValue=''}});
+
+/* ---------- screens: setup / login ---------- */
+function guessRepo(){
+  const m=location.hostname.match(/^([^.]+)\.github\.io$/);if(!m)return{owner:'',repo:''};
+  const seg=location.pathname.split('/').filter(Boolean);
+  const repo=(seg.length>1||(seg.length===1&&!/\./.test(seg[0])))?seg[0]:m[1]+'.github.io';
+  return{owner:m[1],repo}}
+
+function setupView(){
+  const g=guessRepo(),imp=S.setupMode==='import';
+  const f={owner:h('input',{class:'ltr',value:g.owner,autocapitalize:'off',autocorrect:'off'}),repo:h('input',{class:'ltr',value:g.repo,autocapitalize:'off',autocorrect:'off'}),
+    folder:h('input',{class:'ltr',placeholder:'להשאיר ריק בדרך כלל',autocapitalize:'off'}),token:h('input',{class:'ltr',type:'password',autocomplete:'off',placeholder:'github_pat_…'}),
+    key:h('textarea',{class:'ltr',placeholder:'הדבק כאן את המפתח המוצפן'}),pw:h('input',{type:'password',autocomplete:'new-password'}),pw2:h('input',{type:'password',autocomplete:'new-password'})};
+  ['owner','repo','folder'].forEach(k=>f[k].value=f[k].getAttribute('value')||'');
+  const go=async()=>{
+    try{
+      if(f.pw.value.length<8)return toast('הסיסמה צריכה להיות לפחות 8 תווים','err');
+      busy('בודק חיבור…');
+      if(imp){
+        let cfg;try{cfg=JSON.parse(f.key.value.trim())}catch(e){busy('');return toast('המפתח המוצפן לא תקין','err')}
+        try{S.token=await decryptToken(cfg,f.pw.value)}catch(e){busy('');return toast('הסיסמה שגויה למפתח הזה','err')}
+        S.cfg={owner:cfg.owner,repo:cfg.repo,folder:cfg.folder||''};
+        localStorage.setItem(KEY,JSON.stringify(cfg));
+      }else{
+        if(f.pw.value!==f.pw2.value){busy('');return toast('הסיסמאות לא זהות','err')}
+        const tok=f.token.value.trim();
+        if(!f.owner.value.trim()||!f.repo.value.trim()||!tok){busy('');return toast('יש למלא שם משתמש, שם ריפו ומפתח','err')}
+        S.cfg={owner:f.owner.value.trim(),repo:f.repo.value.trim(),folder:f.folder.value.trim()};S.token=tok;
+        await checkRepo();
+        const enc=await encryptToken(tok,f.pw.value);
+        localStorage.setItem(KEY,JSON.stringify(Object.assign({v:1},S.cfg,enc)))}
+      await startSession()
+    }catch(e){busy('');S.token=null;toast(e.message||'שגיאה','err')}};
+  return h('div',{class:'wrap center'},
+    h('div',{class:'top'},h('div',null,h('h1',null,'ניהול האתר'),h('small',null,'הגדרה חד־פעמית למכשיר הזה'))),
+    h('div',{class:'tabs'},h('button',{class:'tab'+(imp?'':' on'),onclick:()=>{S.setupMode='new';render()}},'התחברות ראשונה'),h('button',{class:'tab'+(imp?' on':''),onclick:()=>{S.setupMode='import';render()}},'יש לי מפתח מוצפן')),
+    h('div',{class:'card'},
+      imp?[h('p',{class:'hint'},'בחר "העתק מפתח מוצפן" בלוח הניהול ממכשיר אחר, הדבק כאן, והקלד את הסיסמה שבחרת שם.'),h('label',null,'מפתח מוצפן'),f.key]
+      :[h('ol',{class:'steps'},
+          h('li',null,'היכנס ל־GitHub ← ',h('b',null,'Settings ← Developer settings ← Personal access tokens ← Fine-grained tokens ← Generate new token')),
+          h('li',null,'בחר את הריפו של האתר בלבד (Only select repositories).'),
+          h('li',null,'תחת Permissions ← Repository permissions ← ',h('b',null,'Contents: Read and write'),'.'),
+          h('li',null,'צור את המפתח, העתק אותו והדבק למטה.')),
+        h('label',null,'שם משתמש ב־GitHub'),f.owner,
+        h('label',null,'שם הריפו (Repository)'),f.repo,
+        h('label',null,'מפתח GitHub (Token)'),f.token,
+        h('details',null,h('summary',null,'מתקדם'),h('label',null,'תיקיית האתר בתוך הריפו'),f.folder)],
+      h('label',null,imp?'סיסמת הניהול':'בחר סיסמת ניהול (לפחות 8 תווים)'),f.pw,
+      imp?null:[h('label',null,'אימות סיסמה'),f.pw2],
+      h('p',{class:'hint'},'הסיסמה מצפינה את המפתח על המכשיר הזה בלבד. בלי הסיסמה אי אפשר לערוך את האתר.'),
+      btn(imp?'התחבר':'שמור והתחבר',go,'gold big')))}
+
+function loginView(){
+  const pw=h('input',{type:'password',autocomplete:'current-password',autofocus:true,placeholder:'סיסמה'});
+  const go=async()=>{
+    const cfg=getSaved();if(!cfg)return;
+    busy('בודק סיסמה…');
+    try{S.token=await decryptToken(cfg,pw.value)}catch(e){busy('');S.token=null;return toast('סיסמה שגויה','err')}
+    S.cfg={owner:cfg.owner,repo:cfg.repo,folder:cfg.folder||''};await startSession()};
+  pw.onkeydown=e=>{if(e.key==='Enter')go()};
+  return h('div',{class:'wrap center'},
+    h('div',{class:'top'},h('div',null,h('h1',null,'ניהול האתר'),h('small',null,'ארמון נדל״ן'))),
+    h('div',{class:'card'},h('label',null,'סיסמת ניהול'),pw,btn('כניסה',go,'gold big'),
+      h('p',{style:'text-align:center;margin-top:14px'},btn('מכשיר חדש / איפוס מפתח',()=>{if(confirm('למחוק את ההגדרה השמורה במכשיר הזה ולהגדיר מחדש?')){localStorage.removeItem(KEY);S.screen='setup';render()}},'link'))))}
+
+/* ---------- main ---------- */
+function topbar(){
+  return h('div',{class:'top'},h('div',null,h('h1',null,'ניהול האתר'),h('small',{class:'ltr',style:'text-align:right'},S.cfg.owner+'/'+S.cfg.repo)),
+    h('div',{class:'acts'},h('a',{href:new URL('./',location.href).href,target:'_blank',rel:'noopener'},h('button',{type:'button',class:'small'},'צפייה באתר ↗')),btn('התנתקות',()=>logout(false),'small')))}
+function tabs(){
+  return h('div',{class:'tabs'},[['props','נכסים'],['site','פרטי קשר'],['sec','אבטחה']].map(([k,n])=>h('button',{class:'tab'+(S.tab===k?' on':''),onclick:()=>{S.tab=k;render()}},n)))}
+
+function propsList(){
+  const P=S.content.properties;
+  return h('div',null,
+    h('p',{class:'hint',style:'margin:12px 0'},'הסדר כאן הוא הסדר באתר. לחץ "עריכה" כדי לשנות מחיר, תמונות וטקסטים בכל 4 השפות.'),
+    P.length?P.map((p,i)=>h('div',{class:'item'},
+      h('img',{class:'th',src:previewSrc(p.cover),alt:''}),
+      h('div',{class:'meta'},h('b',null,tl(p.t)||'(ללא כותרת)'),h('span',null,(p.price?p.price+' ₪':'ללא מחיר')+' · '+(tl(p.cap)||''))),
+      h('div',{class:'acts'},btn('↑',()=>moveProp(i,-1),'small'),btn('↓',()=>moveProp(i,1),'small'),btn('עריכה',()=>{S.edit=i;S.lang='he';render();scrollTo(0,0)},'small gold'),btn('מחיקה',()=>delProp(i),'small danger'))))
+    :h('p',{class:'hint'},'עדיין אין נכסים.'),
+    btn('+ הוספת נכס חדש',addProp,'gold big'))}
+function moveProp(i,d){const P=S.content.properties,j=i+d;if(j<0||j>=P.length)return;[P[i],P[j]]=[P[j],P[i]];setDirty();render()}
+function delProp(i){const p=S.content.properties[i];if(!confirm('למחוק את הנכס "'+(tl(p.t)||'ללא שם')+'"? (המחיקה תיכנס לתוקף רק אחרי "פרסם")'))return;S.content.properties.splice(i,1);setDirty();render()}
+function addProp(){
+  S.content.properties.push(normProp({price:'',cover:'',imgs:[],secs:[{t:Lm('עיקרי הנכס','Property Highlights','Ключевые особенности','Points forts du bien'),p:Lm(),it:[{l:Lm(),v:Lm()}]}]}));
+  S.edit=S.content.properties.length-1;S.lang='he';setDirty();render();scrollTo(0,0)}
+
+function siteView(){
+  const s=S.content.site;
+  const mk=(k,label,hint,dir)=>{const i=h('input',{class:'ltr',value:s[k]||'',inputmode:'tel'});i.value=s[k]||'';i.oninput=()=>{s[k]=i.value;setDirty()};return [h('label',null,label),i,hint?h('div',{class:'hint'},hint):null]};
+  return h('div',{class:'card'},
+    mk('phone','מספר טלפון (מוצג באתר, ובכפתור "התקשרו")','למשל: 054-584-1063'),
+    mk('wa','מספר וואטסאפ (אליו נשלחות הפניות והזמנות הפגישה)','אפשר לכתוב בפורמט מקומי (054…) – יומר אוטומטית לפורמט בינלאומי.'))}
+
+function securityView(){
+  return h('div',{class:'card'},
+    h('p',{style:'margin-bottom:6px'},'המפתח לגישה ל־GitHub שמור במכשיר הזה בלבד, מוצפן בסיסמה שבחרת.'),
+    h('p',{class:'hint'},'כדי להתחבר ממכשיר נוסף: העתק את המפתח המוצפן, ובמכשיר החדש בחר "יש לי מפתח מוצפן" והקלד את אותה סיסמה.'),
+    h('div',{style:'display:grid;gap:10px;margin-top:16px'},
+      btn('העתק מפתח מוצפן למכשיר אחר',async()=>{try{await navigator.clipboard.writeText(localStorage.getItem(KEY));toast('הועתק','ok')}catch(e){prompt('העתק את הטקסט:',localStorage.getItem(KEY))}}),
+      btn('שינוי סיסמה',changePw),
+      btn('התנתקות ומחיקת ההגדרה מהמכשיר',()=>{if(confirm('למחוק את ההגדרה מהמכשיר? תצטרך מפתח GitHub או מפתח מוצפן כדי להתחבר שוב.'))logout(true)},'danger')))}
+async function changePw(){
+  const a=prompt('סיסמה חדשה (לפחות 8 תווים):');if(a==null)return;
+  if(a.length<8)return toast('הסיסמה קצרה מדי','err');
+  const b=prompt('הקלד שוב לאימות:');if(a!==b)return toast('הסיסמאות לא זהות','err');
+  busy('מצפין…');const enc=await encryptToken(S.token,a);
+  localStorage.setItem(KEY,JSON.stringify(Object.assign({v:1},S.cfg,enc)));busy('');toast('הסיסמה עודכנה','ok')}
+
+function mainView(){
+  return h('div',{class:'wrap'},topbar(),tabs(),S.tab==='props'?propsList():S.tab==='site'?siteView():securityView())}
+
+/* ---------- property editor ---------- */
+function txt(map,multi,ph){
+  const el=h(multi?'textarea':'input',{dir:S.lang==='he'?'rtl':'ltr',placeholder:ph||((S.lang!=='en'&&map.en)?'באנגלית: '+map.en:'')});
+  el.value=map[S.lang]||'';el.oninput=()=>{map[S.lang]=el.value;setDirty()};return el}
+function pickImages(multiple,cb){
+  const i=h('input',{type:'file',accept:'image/*',multiple:multiple||null,style:'display:none'});
+  i.onchange=async()=>{const files=[...i.files];if(!files.length)return;const out=[];
+    try{for(let k=0;k<files.length;k++){busy('מעבד תמונה '+(k+1)+' מתוך '+files.length+'…');out.push(await procImg(files[k]))}busy('');cb(out)}
+    catch(e){busy('');toast('לא הצלחתי לקרוא את התמונה. נסה קובץ JPG או PNG.','err')}};
+  document.body.append(i);i.click();setTimeout(()=>i.remove(),60000)}
+async function procImg(file){
+  let bmp;
+  try{bmp=await createImageBitmap(file)}catch(e){bmp=await new Promise((res,rej)=>{const im=new Image();im.onload=()=>res(im);im.onerror=rej;im.src=URL.createObjectURL(file)})}
+  const w=bmp.width||bmp.naturalWidth,hh=bmp.height||bmp.naturalHeight,sc=Math.min(1,1800/Math.max(w,hh));
+  const c=document.createElement('canvas');c.width=Math.round(w*sc);c.height=Math.round(hh*sc);
+  const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(bmp,0,0,c.width,c.height);
+  const blob=await new Promise(r=>c.toBlob(r,'image/jpeg',.85));
+  const b64=u8b64(new Uint8Array(await blob.arrayBuffer()));
+  const path='img/'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)+'.jpg';
+  S.pending[path]=b64;S.previews[path]='data:image/jpeg;base64,'+b64;return path}
+function rerender(){const y=scrollY;render();scrollTo(0,y)}
+
+function editView(){
+  const p=S.content.properties[S.edit];
+  const price=h('input',{inputmode:'numeric',placeholder:'למשל 10,200,000'});price.value=p.price;price.oninput=()=>{p.price=price.value;setDirty()};
+  const filled=k=>!!p.t[k];
+  return h('div',{class:'wrap'},
+    h('div',{class:'top'},btn('← חזרה לרשימה',()=>{S.edit=-1;render();scrollTo(0,0)},'small'),h('h1',null,'עריכת נכס')),
+    h('div',{class:'card'},
+      h('label',null,'מחיר (₪)'),price,
+      h('label',null,'תמונה ראשית (מופיעה בכרטיס ברשימה ובראש עמוד הנכס)'),
+      h('div',{class:'cover'},p.cover?h('img',{src:previewSrc(p.cover),alt:''}):h('span',{class:'hint'},'לא נבחרה תמונה'),
+        btn(p.cover?'החלפת תמונה':'בחירת תמונה',()=>pickImages(false,r=>{p.cover=r[0];setDirty();rerender()}))),
+      h('label',null,'גלריית תמונות (התמונה הראשונה מוצגת גדולה)'),
+      h('div',{class:'grid'},p.imgs.map((src,i)=>h('div',{class:'gi'},h('img',{src:previewSrc(src),alt:''}),
+        h('div',null,
+          h('button',{type:'button',class:'small',title:'הקדם',onclick:()=>{if(i>0){[p.imgs[i-1],p.imgs[i]]=[p.imgs[i],p.imgs[i-1]];setDirty();rerender()}}},'→'),
+          h('button',{type:'button',class:'small danger',title:'הסר',onclick:()=>{p.imgs.splice(i,1);setDirty();rerender()}},'✕'),
+          h('button',{type:'button',class:'small',title:'אחר',onclick:()=>{if(i<p.imgs.length-1){[p.imgs[i+1],p.imgs[i]]=[p.imgs[i],p.imgs[i+1]];setDirty();rerender()}}},'←'))))),
+      btn('+ הוספת תמונות לגלריה',()=>pickImages(true,r=>{p.imgs.push(...r);setDirty();rerender()}),'big')),
+    h('div',{class:'ltabs'},LANGS.map(([k,n])=>h('button',{type:'button',class:'ltab'+(S.lang===k?' on':''),onclick:()=>{S.lang=k;rerender()}},n+(filled(k)?' ✓':'')))),
+    h('p',{class:'hint',style:'margin:10px 0'},'כל השפות נערכות בנפרד. אם שפה נשארת ריקה, יוצג באתר הטקסט באנגלית. אחרי שמסיימים לעבור בין השפות – "פרסם".'),
+    h('div',{class:'card'},
+      h('label',null,'שורת תיאור קצרה (בכרטיס ברשימה)'),txt(p.cap,false),h('div',{class:'hint'},'למשל: פנטהאוז · קומה 35 · פרויקט מומנט, בת ים'),
+      h('label',null,'כותרת הנכס'),txt(p.t,false),
+      h('label',null,'כותרת משנה'),txt(p.s,false),
+      h('label',null,'תיאור פתיחה'),txt(p.i,true)),
+    h('h2',null,'קטעי מידע (תחת התמונות)'),
+    p.secs.map((s,si)=>h('div',{class:'sec'},
+      h('div',{class:'sech'},h('b',null,'קטע '+(si+1)),
+        h('div',{class:'acts'},
+          btn('↑',()=>{if(si>0){[p.secs[si-1],p.secs[si]]=[p.secs[si],p.secs[si-1]];setDirty();rerender()}},'small'),
+          btn('↓',()=>{if(si<p.secs.length-1){[p.secs[si+1],p.secs[si]]=[p.secs[si],p.secs[si+1]];setDirty();rerender()}},'small'),
+          btn('מחק קטע',()=>{if(confirm('למחוק את הקטע?')){p.secs.splice(si,1);setDirty();rerender()}},'small danger'))),
+      h('label',null,'כותרת הקטע (לא חובה)'),txt(s.t,false),
+      h('label',null,'פסקת טקסט (לא חובה)'),txt(s.p,true),
+      h('label',null,'שורות מידע (שם + תיאור)'),
+      s.it.map((x,ii)=>h('div',{class:'row'},txt(x.l,false,'שם (למשל: חניה)'),txt(x.v,false,'תיאור'),btn('✕',()=>{s.it.splice(ii,1);setDirty();rerender()},'danger'))),
+      btn('+ הוספת שורה',()=>{s.it.push({l:Lm(),v:Lm()});setDirty();rerender()},'small'))),
+    btn('+ הוספת קטע חדש',()=>{p.secs.push({t:Lm(),p:Lm(),it:[{l:Lm(),v:Lm()}]});setDirty();rerender()},'big'))}
+
+/* ---------- publish bar + render ---------- */
+function updateBar(){
+  const b=$('#bar');if(!b)return;
+  const kids=[h('div',{class:'st'+(S.dirty?' dirty':'')},S.dirty?'יש שינויים שעוד לא פורסמו':'הכול מעודכן')];
+  if(S.dirty)kids.push(btn('בטל',discard,'small'));
+  kids.push(h('button',{type:'button',class:'gold',disabled:!S.dirty,onclick:publish},'פרסם באתר'));
+  b.replaceChildren(...kids)}
+function render(){
+  const app=$('#app');
+  const v=S.screen==='setup'?setupView():S.screen==='login'?loginView():S.edit>=0?editView():mainView();
+  app.replaceChildren(v);
+  if(S.screen==='main'){app.append(h('div',{id:'bar'}));updateBar()}}
+
+/* ---------- boot ---------- */
+(function(){
+  if(!window.crypto||!crypto.subtle){document.body.textContent='הדפדפן או הכתובת לא תומכים בהצפנה. פתח את הדף דרך כתובת https של האתר.';return}
+  S.screen=getSaved()?'login':'setup';render()})();
+</script>
+</body>
+</html>
