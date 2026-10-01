@@ -8,7 +8,7 @@
  "properties": [
   {
    "id": "p1",
-   "price": "10,200,000",
+   "price": "10300000",
    "cover": "img/3.jpg",
    "imgs": [
     "img/4.jpg",
@@ -18,124 +18,124 @@
     "img/8.jpg"
    ],
    "cap": {
-    "en": "Penthouse · Floor 35 · Project Moment, Bat Yam",
     "he": "פנטהאוז · קומה 35 · פרויקט מומנט, בת ים",
+    "en": "Penthouse · Floor 35 · Project Moment, Bat Yam",
     "ru": "Пентхаус · 35-й этаж · проект Moment, Бат-Ям",
     "fr": "Penthouse · 35e étage · projet Moment, Bat Yam"
    },
    "t": {
-    "en": "Ultra-Luxury Penthouse | 35th Floor",
     "he": "פנטהאוז אולטרה-יוקרתי | קומה 35",
+    "en": "Ultra-Luxury Penthouse | 35th Floor",
     "ru": "Пентхаус ультра-класса | 35-й этаж",
     "fr": "Penthouse ultra-luxe | 35e étage"
    },
    "s": {
-    "en": "MOMENT Project, Bat Yam | Built by Azorim",
     "he": "פרויקט מומנט, בת ים | בנייה: אזורים",
+    "en": "MOMENT Project, Bat Yam | Built by Azorim",
     "ru": "Проект MOMENT, Бат-Ям | Застройщик Azorim",
     "fr": "Projet MOMENT, Bat Yam | Construit par Azorim"
    },
    "i": {
-    "en": "An exceptional high-floor residence offering voluminous living spaces, soaring ceilings, and panoramic skyline and sea views.",
     "he": "דירה יוצאת דופן בקומה גבוהה עם חללי מגורים מרווחים, תקרות גבוהות ונוף פנורמי לקו הרקיע ולים.",
+    "en": "An exceptional high-floor residence offering voluminous living spaces, soaring ceilings, and panoramic skyline and sea views.",
     "ru": "Исключительная резиденция на высоком этаже с просторными помещениями, высокими потолками и панорамным видом на город и море.",
     "fr": "Une résidence d'exception en étage élevé, aux volumes généreux, aux hauts plafonds et à la vue panoramique sur la ville et la mer."
    },
    "secs": [
     {
      "t": {
-      "en": "Property Highlights",
       "he": "עיקרי הנכס",
+      "en": "Property Highlights",
       "ru": "Ключевые особенности",
       "fr": "Points forts du bien"
      },
      "p": {
-      "en": "",
       "he": "",
+      "en": "",
       "ru": "",
       "fr": ""
      },
      "it": [
       {
        "l": {
-        "en": "Layout",
         "he": "תכנון",
+        "en": "Layout",
         "ru": "Планировка",
         "fr": "Agencement"
        },
        "v": {
-        "en": "6 spacious rooms",
         "he": "6 חדרים מרווחים",
+        "en": "6 spacious rooms",
         "ru": "6 просторных комнат",
         "fr": "6 pièces spacieuses"
        }
       },
       {
        "l": {
-        "en": "Interior Space",
         "he": "שטח פנימי",
+        "en": "Interior Space",
         "ru": "Внутренняя площадь",
         "fr": "Surface intérieure"
        },
        "v": {
-        "en": "214 sqm built",
         "he": "214 מ״ר בנויים",
+        "en": "214 sqm built",
         "ru": "214 м² застроенной площади",
         "fr": "214 m² construits"
        }
       },
       {
        "l": {
-        "en": "Sun Terrace",
         "he": "מרפסת שמש",
+        "en": "Sun Terrace",
         "ru": "Солнечная терраса",
         "fr": "Terrasse ensoleillée"
        },
        "v": {
-        "en": "112 sqm private terrace",
         "he": "מרפסת פרטית של 112 מ״ר",
+        "en": "112 sqm private terrace",
         "ru": "Частная терраса 112 м²",
         "fr": "Terrasse privée de 112 m²"
        }
       },
       {
        "l": {
-        "en": "Ceiling Height",
         "he": "גובה תקרה",
+        "en": "Ceiling Height",
         "ru": "Высота потолков",
         "fr": "Hauteur sous plafond"
        },
        "v": {
-        "en": "Impressive 4.5 meters",
         "he": "4.5 מטרים מרשימים",
+        "en": "Impressive 4.5 meters",
         "ru": "Впечатляющие 4,5 метра",
         "fr": "Impressionnants 4,5 mètres"
        }
       },
       {
        "l": {
-        "en": "Storage",
         "he": "מחסן",
+        "en": "Storage",
         "ru": "Кладовая",
         "fr": "Rangement"
        },
        "v": {
-        "en": "6.5 sqm private on-floor storage unit",
         "he": "מחסן פרטי בקומה, 6.5 מ״ר",
+        "en": "6.5 sqm private on-floor storage unit",
         "ru": "Частная кладовая на этаже 6,5 м²",
         "fr": "Cellier privé de 6,5 m² sur le palier"
        }
       },
       {
        "l": {
-        "en": "Parking",
         "he": "חניה",
+        "en": "Parking",
         "ru": "Парковка",
         "fr": "Parking"
        },
        "v": {
-        "en": "2 private deeded (Tabu) parking spaces",
         "he": "2 חניות פרטיות רשומות בטאבו",
+        "en": "2 private deeded (Tabu) parking spaces",
         "ru": "2 частных парковочных места в собственности (Табу)",
         "fr": "2 places de parking privées avec titre de propriété (Tabou)"
        }
@@ -144,14 +144,14 @@
     },
     {
      "t": {
-      "en": "Location & Accessibility",
       "he": "מיקום ונגישות",
+      "en": "Location & Accessibility",
       "ru": "Расположение и транспорт",
       "fr": "Emplacement et accessibilité"
      },
      "p": {
-      "en": "Prime central location with immediate access to the Light Rail (Red Line) and major traffic routes.",
       "he": "מיקום מרכזי מובחר עם גישה מיידית לרכבת הקלה (הקו האדום) ולצירי התנועה המרכזיים.",
+      "en": "Prime central location with immediate access to the Light Rail (Red Line) and major traffic routes.",
       "ru": "Престижное центральное расположение с прямым выездом к легкорельсовому транспорту (Красная линия) и основным магистралям.",
       "fr": "Emplacement central privilégié, avec accès immédiat au tramway (ligne rouge) et aux grands axes routiers."
      },
@@ -170,124 +170,124 @@
     "img/13.jpg"
    ],
    "cap": {
-    "en": "Penthouse · Floor 25 · Project Mivnim, Bat Yam · On the Coast",
     "he": "פנטהאוז · קומה 25 · פרויקט מבנים, בת ים · על קו המים",
+    "en": "Penthouse · Floor 25 · Project Mivnim, Bat Yam · On the Coast",
     "ru": "Пентхаус · 25-й этаж · проект Mivnim, Бат-Ям · на берегу моря",
     "fr": "Penthouse · 25e étage · projet Mivnim, Bat Yam · en bord de mer"
    },
    "t": {
-    "en": "Where Luxury, Architecture & the Coastline Converge",
     "he": "היכן שיוקרה, אדריכלות וקו החוף נפגשים",
+    "en": "Where Luxury, Architecture & the Coastline Converge",
     "ru": "Где сходятся роскошь, архитектура и побережье",
     "fr": "Là où le luxe, l'architecture et le littoral se rencontrent"
    },
    "s": {
-    "en": "A Rare Penthouse in the 'Mivnim' Project, Park HaYam, Bat Yam",
     "he": "פנטהאוז נדיר בפרויקט ״מבנים״, פארק הים, בת ים",
+    "en": "A Rare Penthouse in the 'Mivnim' Project, Park HaYam, Bat Yam",
     "ru": "Редкий пентхаус в проекте «Mivnim», Парк ха-Ям, Бат-Ям",
     "fr": "Un penthouse rare dans le projet « Mivnim », Park HaYam, Bat Yam"
    },
    "i": {
-    "en": "A once-in-a-lifetime opportunity to own one of the most prestigious trophy assets on the coastline – absolute first line to the sea, in the city's most coveted neighborhood.",
     "he": "הזדמנות חד-פעמית להיות בעלים של אחד הנכסים היוקרתיים ביותר על קו החוף — קו ראשון לים בשכונה המבוקשת בעיר.",
+    "en": "A once-in-a-lifetime opportunity to own one of the most prestigious trophy assets on the coastline – absolute first line to the sea, in the city's most coveted neighborhood.",
     "ru": "Уникальная возможность приобрести один из самых престижных активов побережья — первая линия у моря в самом востребованном районе города.",
     "fr": "Une occasion unique de posséder l'un des biens les plus prestigieux du littoral : première ligne face à la mer, dans le quartier le plus prisé de la ville."
    },
    "secs": [
     {
      "t": {
-      "en": "Property Highlights",
       "he": "עיקרי הנכס",
+      "en": "Property Highlights",
       "ru": "Ключевые особенности",
       "fr": "Points forts du bien"
      },
      "p": {
-      "en": "",
       "he": "",
+      "en": "",
       "ru": "",
       "fr": ""
      },
      "it": [
       {
        "l": {
-        "en": "Location",
         "he": "מיקום",
+        "en": "Location",
         "ru": "Расположение",
         "fr": "Emplacement"
        },
        "v": {
-        "en": "25th floor, exclusive 'Mivnim' tower, Park HaYam neighborhood",
         "he": "קומה 25, מגדל ״מבנים״ בלעדי, שכונת פארק הים",
+        "en": "25th floor, exclusive 'Mivnim' tower, Park HaYam neighborhood",
         "ru": "25-й этаж, эксклюзивная башня «Mivnim», район Парк ха-Ям",
         "fr": "25e étage, tour exclusive « Mivnim », quartier Park HaYam"
        }
       },
       {
        "l": {
-        "en": "Living Space",
         "he": "שטח מגורים",
+        "en": "Living Space",
         "ru": "Жилая площадь",
         "fr": "Surface habitable"
        },
        "v": {
-        "en": "Approx. 188 sqm built + approx. 144 sqm expansive terraces opening to the horizon",
         "he": "כ-188 מ״ר בנויים + כ-144 מ״ר מרפסות רחבות הנפתחות אל האופק",
+        "en": "Approx. 188 sqm built + approx. 144 sqm expansive terraces opening to the horizon",
         "ru": "Около 188 м² жилой площади + около 144 м² просторных террас с видом на горизонт",
         "fr": "Environ 188 m² construits + environ 144 m² de vastes terrasses ouvertes sur l'horizon"
        }
       },
       {
        "l": {
-        "en": "Layout",
         "he": "תכנון",
+        "en": "Layout",
         "ru": "Планировка",
         "fr": "Agencement"
        },
        "v": {
-        "en": "6 spacious rooms crafted with bespoke architectural precision",
         "he": "6 חדרים מרווחים בתכנון אדריכלי בהתאמה אישית",
+        "en": "6 spacious rooms crafted with bespoke architectural precision",
         "ru": "6 просторных комнат с индивидуальной архитектурной проработкой",
         "fr": "6 pièces spacieuses conçues avec une précision architecturale sur mesure"
        }
       },
       {
        "l": {
-        "en": "Rooftop & Entertaining",
         "he": "גג ואירוח",
+        "en": "Rooftop & Entertaining",
         "ru": "Крыша и зона отдыха",
         "fr": "Toit et réceptions"
        },
        "v": {
-        "en": "Spectacular private swimming pool on the upper terrace alongside a fully equipped, high-end outdoor kitchen",
         "he": "בריכת שחייה פרטית מרהיבה במרפסת העליונה לצד מטבח חוץ מאובזר ברמה גבוהה",
+        "en": "Spectacular private swimming pool on the upper terrace alongside a fully equipped, high-end outdoor kitchen",
         "ru": "Великолепный частный бассейн на верхней террасе и полностью оборудованная уличная кухня премиум-класса",
         "fr": "Spectaculaire piscine privée sur la terrasse supérieure et cuisine extérieure haut de gamme entièrement équipée"
        }
       },
       {
        "l": {
-        "en": "Lifestyle & Comfort",
         "he": "סגנון חיים ונוחות",
+        "en": "Lifestyle & Comfort",
         "ru": "Стиль жизни и комфорт",
         "fr": "Confort et art de vivre"
        },
        "v": {
-        "en": "Private internal elevator within the residence, comprehensive underfloor heating throughout, and an integrated advanced sound system",
         "he": "מעלית פרטית פנימית בתוך הדירה, חימום תת-רצפתי בכל הדירה ומערכת סאונד מתקדמת משולבת",
+        "en": "Private internal elevator within the residence, comprehensive underfloor heating throughout, and an integrated advanced sound system",
         "ru": "Частный лифт внутри резиденции, тёплые полы по всей площади и встроенная современная звуковая система",
         "fr": "Ascenseur privé au sein de la résidence, chauffage au sol partout et système audio avancé intégré"
        }
       },
       {
        "l": {
-        "en": "Amenities & Storage",
         "he": "שירותים ומחסן",
+        "en": "Amenities & Storage",
         "ru": "Удобства и кладовая",
         "fr": "Services et rangement"
        },
        "v": {
-        "en": "2 private deeded parking spaces (Tabu), dedicated storage room, and an opulent lobby with 24/7 concierge & security",
         "he": "2 חניות פרטיות רשומות בטאבו, חדר מחסן ייעודי ולובי יוקרתי עם קונסיירז׳ ואבטחה 24/7",
+        "en": "2 private deeded parking spaces (Tabu), dedicated storage room, and an opulent lobby with 24/7 concierge & security",
         "ru": "2 частных парковочных места в собственности (Табу), отдельная кладовая и роскошный вестибюль с консьержем и охраной 24/7",
         "fr": "2 places de parking privées (Tabou), un cellier dédié et un somptueux hall avec conciergerie et sécurité 24h/24"
        }
@@ -296,14 +296,14 @@
     },
     {
      "t": {
-      "en": "",
       "he": "",
+      "en": "",
       "ru": "",
       "fr": ""
      },
      "p": {
-      "en": "Breathtaking interior design executed to an uncompromising standard, floor-to-ceiling glass framing panoramic Mediterranean sunsets, and complete privacy.",
       "he": "עיצוב פנים עוצר נשימה ברמה ללא פשרות, זכוכית מהרצפה עד התקרה המשקיפה על שקיעות ים תיכוניות ופרטיות מלאה.",
+      "en": "Breathtaking interior design executed to an uncompromising standard, floor-to-ceiling glass framing panoramic Mediterranean sunsets, and complete privacy.",
       "ru": "Захватывающий дизайн интерьера, выполненный по бескомпромиссным стандартам, стеклянные стены от пола до потолка с видом на средиземноморские закаты и полная приватность.",
       "fr": "Un design intérieur à couper le souffle, d'une exigence sans compromis, des baies vitrées du sol au plafond sur les couchers de soleil méditerranéens, et une intimité totale."
      },
@@ -323,82 +323,82 @@
     "img/19.jpg"
    ],
    "cap": {
-    "en": "Luxury Apartment · Floor 13 · Project Herzliya Hills, Herzliya",
     "he": "דירת יוקרה · קומה 13 · פרויקט הרצליה הילס, הרצליה",
+    "en": "Luxury Apartment · Floor 13 · Project Herzliya Hills, Herzliya",
     "ru": "Роскошная квартира · 13-й этаж · проект Herzliya Hills, Герцлия",
     "fr": "Appartement de luxe · 13e étage · projet Herzliya Hills, Herzliya"
    },
    "t": {
-    "en": "Resort-Style Living at Herzliya Hills",
     "he": "חיי נופש בהרצליה הילס",
+    "en": "Resort-Style Living at Herzliya Hills",
     "ru": "Жизнь в стиле курорта в Herzliya Hills",
     "fr": "Vivre comme en resort à Herzliya Hills"
    },
    "s": {
-    "en": "13th-Floor Luxury Residences",
     "he": "דירות יוקרה בקומה 13",
+    "en": "13th-Floor Luxury Residences",
     "ru": "Роскошные резиденции на 13-м этаже",
     "fr": "Résidences de luxe au 13e étage"
    },
    "i": {
-    "en": "A rare opportunity to secure one of two premium apartments on the 13th floor of one of Israel’s most prestigious residential complexes.",
     "he": "הזדמנות נדירה לרכוש אחת משתי דירות פרימיום בקומה 13 באחד מהמתחמים המגורים היוקרתיים בישראל.",
+    "en": "A rare opportunity to secure one of two premium apartments on the 13th floor of one of Israel’s most prestigious residential complexes.",
     "ru": "Редкая возможность приобрести одну из двух премиальных квартир на 13-м этаже в одном из самых престижных жилых комплексов Израиля.",
     "fr": "Une occasion rare d'acquérir l'un des deux appartements premium du 13e étage d'un des ensembles résidentiels les plus prestigieux d'Israël."
    },
    "secs": [
     {
      "t": {
-      "en": "Residence Highlights",
       "he": "עיקרי הדירה",
+      "en": "Residence Highlights",
       "ru": "Особенности резиденции",
       "fr": "Points forts de la résidence"
      },
      "p": {
-      "en": "",
       "he": "",
+      "en": "",
       "ru": "",
       "fr": ""
      },
      "it": [
       {
        "l": {
-        "en": "Layout",
         "he": "תכנון",
+        "en": "Layout",
         "ru": "Планировка",
         "fr": "Agencement"
        },
        "v": {
-        "en": "5 spacious, sun-filled rooms",
         "he": "5 חדרים מרווחים ומוארים",
+        "en": "5 spacious, sun-filled rooms",
         "ru": "5 просторных, залитых солнцем комнат",
         "fr": "5 pièces spacieuses et lumineuses"
        }
       },
       {
        "l": {
-        "en": "Space",
         "he": "שטח",
+        "en": "Space",
         "ru": "Площадь",
         "fr": "Surface"
        },
        "v": {
-        "en": "112 sqm interior + 18 sqm sun terrace with open views",
         "he": "112 מ״ר שטח פנימי + מרפסת שמש 18 מ״ר עם נוף פתוח",
+        "en": "112 sqm interior + 18 sqm sun terrace with open views",
         "ru": "112 м² внутри + солнечная терраса 18 м² с открытым видом",
         "fr": "112 m² intérieurs + terrasse ensoleillée de 18 m² avec vue dégagée"
        }
       },
       {
        "l": {
-        "en": "Parking & Storage",
         "he": "חניה ומחסן",
+        "en": "Parking & Storage",
         "ru": "Парковка и кладовая",
         "fr": "Parking et rangement"
        },
        "v": {
-        "en": "2 adjacent (side-by-side) underground parking spaces + private storage unit",
         "he": "2 חניות תת-קרקעיות צמודות זו לזו + מחסן פרטי",
+        "en": "2 adjacent (side-by-side) underground parking spaces + private storage unit",
         "ru": "2 смежных подземных парковочных места + частная кладовая",
         "fr": "2 places de parking souterraines côte à côte + cellier privé"
        }
@@ -407,70 +407,70 @@
     },
     {
      "t": {
-      "en": "The Herzliya Hills Club Lifestyle",
       "he": "אורח החיים במועדון הרצליה הילס",
+      "en": "The Herzliya Hills Club Lifestyle",
       "ru": "Клубный образ жизни Herzliya Hills",
       "fr": "Le style de vie du club Herzliya Hills"
      },
      "p": {
-      "en": "",
       "he": "",
+      "en": "",
       "ru": "",
       "fr": ""
      },
      "it": [
       {
        "l": {
-        "en": "",
         "he": "",
+        "en": "",
         "ru": "",
         "fr": ""
        },
        "v": {
-        "en": "Olympic-scale heated indoor swimming pool",
         "he": "בריכת שחייה מקורה ומחוממת בקנה מידה אולימפי",
+        "en": "Olympic-scale heated indoor swimming pool",
         "ru": "Отапливаемый крытый бассейн олимпийского масштаба",
         "fr": "Piscine intérieure chauffée aux dimensions olympiques"
        }
       },
       {
        "l": {
-        "en": "",
         "he": "",
+        "en": "",
         "ru": "",
         "fr": ""
        },
        "v": {
-        "en": "State-of-the-art designer gym",
         "he": "חדר כושר מעוצב מהמתקדמים ביותר",
+        "en": "State-of-the-art designer gym",
         "ru": "Современный дизайнерский спортзал",
         "fr": "Salle de sport design ultramoderne"
        }
       },
       {
        "l": {
-        "en": "",
         "he": "",
+        "en": "",
         "ru": "",
         "fr": ""
        },
        "v": {
-        "en": "Boutique cafés and dining right at your doorstep",
         "he": "בתי קפה ומסעדות בוטיק ממש בסמוך לדלת",
+        "en": "Boutique cafés and dining right at your doorstep",
         "ru": "Бутик-кафе и рестораны прямо у порога",
         "fr": "Cafés et restaurants de charme au pied de l'immeuble"
        }
       },
       {
        "l": {
-        "en": "",
         "he": "",
+        "en": "",
         "ru": "",
         "fr": ""
        },
        "v": {
-        "en": "24/7 concierge, grand lobby, and landscaped private parks",
         "he": "קונסיירז׳ 24/7, לובי מפואר וגנים פרטיים מגוננים",
+        "en": "24/7 concierge, grand lobby, and landscaped private parks",
         "ru": "Консьерж 24/7, роскошный вестибюль и ландшафтные частные парки",
         "fr": "Conciergerie 24h/24, grand hall et parcs privés paysagers"
        }
@@ -491,124 +491,124 @@
     "img/25.jpg"
    ],
    "cap": {
-    "en": "Penthouse · Floor 33 · Yitzhak Sadeh, Bat Yam",
     "he": "פנטהאוז · קומה 33 · יצחק שדה, בת ים",
+    "en": "Penthouse · Floor 33 · Yitzhak Sadeh, Bat Yam",
     "ru": "Пентхаус · 33-й этаж · Ицхак Садэ, Бат-Ям",
     "fr": "Penthouse · 33e étage · Yitzhak Sadeh, Bat Yam"
    },
    "t": {
-    "en": "Panoramic Sea-View Penthouse",
     "he": "פנטהאוז פנורמי עם נוף לים",
+    "en": "Panoramic Sea-View Penthouse",
     "ru": "Панорамный пентхаус с видом на море",
     "fr": "Penthouse panoramique vue mer"
    },
    "s": {
-    "en": "Yitzhak Sadeh St., Bat Yam",
     "he": "רחוב יצחק שדה, בת ים",
+    "en": "Yitzhak Sadeh St., Bat Yam",
     "ru": "ул. Ицхак Садэ, Бат-Ям",
     "fr": "Rue Yitzhak Sadeh, Bat Yam"
    },
    "i": {
-    "en": "An extraordinary high-floor trophy penthouse delivering unobstructed Mediterranean vistas and refined modern luxury.",
     "he": "פנטהאוז יוקרתי יוצא דופן בקומה גבוהה עם נוף פתוח לים התיכון ויוקרה מודרנית מעודנת.",
+    "en": "An extraordinary high-floor trophy penthouse delivering unobstructed Mediterranean vistas and refined modern luxury.",
     "ru": "Необычайный трофейный пентхаус на высоком этаже с открытым видом на Средиземное море и изысканной современной роскошью.",
     "fr": "Un penthouse d'exception en étage élevé, offrant une vue dégagée sur la Méditerranée et un luxe moderne raffiné."
    },
    "secs": [
     {
      "t": {
-      "en": "Property Highlights",
       "he": "עיקרי הנכס",
+      "en": "Property Highlights",
       "ru": "Ключевые особенности",
       "fr": "Points forts du bien"
      },
      "p": {
-      "en": "",
       "he": "",
+      "en": "",
       "ru": "",
       "fr": ""
      },
      "it": [
       {
        "l": {
-        "en": "Floor",
         "he": "קומה",
+        "en": "Floor",
         "ru": "Этаж",
         "fr": "Étage"
        },
        "v": {
-        "en": "33rd floor",
         "he": "קומה 33",
+        "en": "33rd floor",
         "ru": "33-й этаж",
         "fr": "33e étage"
        }
       },
       {
        "l": {
-        "en": "Interior Space",
         "he": "שטח פנימי",
+        "en": "Interior Space",
         "ru": "Внутренняя площадь",
         "fr": "Surface intérieure"
        },
        "v": {
-        "en": "212 sqm interior layout",
         "he": "תכנון פנימי של 212 מ״ר",
+        "en": "212 sqm interior layout",
         "ru": "Внутренняя площадь 212 м²",
         "fr": "212 m² intérieurs"
        }
       },
       {
        "l": {
-        "en": "Exterior Space",
         "he": "שטח חיצוני",
+        "en": "Exterior Space",
         "ru": "Внешняя площадь",
         "fr": "Surface extérieure"
        },
        "v": {
-        "en": "150 sqm expansive sun terraces",
         "he": "מרפסות שמש רחבות של 150 מ״ר",
+        "en": "150 sqm expansive sun terraces",
         "ru": "Просторные солнечные террасы 150 м²",
         "fr": "Vastes terrasses ensoleillées de 150 m²"
        }
       },
       {
        "l": {
-        "en": "Layout",
         "he": "תכנון",
+        "en": "Layout",
         "ru": "Планировка",
         "fr": "Agencement"
        },
        "v": {
-        "en": "5 spacious rooms (easily adaptable into 6 rooms)",
         "he": "5 חדרים מרווחים (ניתן להפוך בקלות ל-6 חדרים)",
+        "en": "5 spacious rooms (easily adaptable into 6 rooms)",
         "ru": "5 просторных комнат (легко превращаются в 6)",
         "fr": "5 pièces spacieuses (facilement transformables en 6)"
        }
       },
       {
        "l": {
-        "en": "Orientation",
         "he": "כיווני אוויר",
+        "en": "Orientation",
         "ru": "Ориентация",
         "fr": "Orientation"
        },
        "v": {
-        "en": "Prime South-West corner facing the open sea",
         "he": "פינה דרום-מערבית מובחרת הפונה אל הים הפתוח",
+        "en": "Prime South-West corner facing the open sea",
         "ru": "Престижный юго-западный угловой вид на открытое море",
         "fr": "Angle sud-ouest privilégié face à la pleine mer"
        }
       },
       {
        "l": {
-        "en": "Parking & Storage",
         "he": "חניה ומחסן",
+        "en": "Parking & Storage",
         "ru": "Парковка и кладовая",
         "fr": "Parking et rangement"
        },
        "v": {
-        "en": "2 private parking spaces + storage unit",
         "he": "2 חניות פרטיות + מחסן",
+        "en": "2 private parking spaces + storage unit",
         "ru": "2 частных парковочных места + кладовая",
         "fr": "2 places de parking privées + cellier"
        }
@@ -628,124 +628,124 @@
     "img/29.jpg"
    ],
    "cap": {
-    "en": "Penthouse · Floor 34 · Yitzhak Sadeh, Bat Yam",
     "he": "פנטהאוז · קומה 34 · יצחק שדה, בת ים",
+    "en": "Penthouse · Floor 34 · Yitzhak Sadeh, Bat Yam",
     "ru": "Пентхаус · 34-й этаж · Ицхак Садэ, Бат-Ям",
     "fr": "Penthouse · 34e étage · Yitzhak Sadeh, Bat Yam"
    },
    "t": {
-    "en": "Frontline Sea-View Mini Penthouse",
     "he": "מיני פנטהאוז בקו ראשון לים",
+    "en": "Frontline Sea-View Mini Penthouse",
     "ru": "Мини-пентхаус на первой линии с видом на море",
     "fr": "Mini-penthouse en première ligne vue mer"
    },
    "s": {
-    "en": "Yitzhak Sadeh St., Bat Yam",
     "he": "רחוב יצחק שדה, בת ים",
+    "en": "Yitzhak Sadeh St., Bat Yam",
     "ru": "ул. Ицхак Садэ, Бат-Ям",
     "fr": "Rue Yitzhak Sadeh, Bat Yam"
    },
    "i": {
-    "en": "An exceptional high-floor luxury residence showcasing panoramic, unobstructed Mediterranean Sea views.",
     "he": "דירת יוקרה יוצאת דופן בקומה גבוהה עם נוף פנורמי בלתי מופרע לים התיכון.",
+    "en": "An exceptional high-floor luxury residence showcasing panoramic, unobstructed Mediterranean Sea views.",
     "ru": "Исключительная роскошная резиденция на высоком этаже с панорамным, ничем не заслонённым видом на Средиземное море.",
     "fr": "Une résidence de luxe d'exception en étage élevé, avec une vue panoramique imprenable sur la Méditerranée."
    },
    "secs": [
     {
      "t": {
-      "en": "Property Overview",
       "he": "סקירת הנכס",
+      "en": "Property Overview",
       "ru": "Обзор объекта",
       "fr": "Aperçu du bien"
      },
      "p": {
-      "en": "",
       "he": "",
+      "en": "",
       "ru": "",
       "fr": ""
      },
      "it": [
       {
        "l": {
-        "en": "Floor",
         "he": "קומה",
+        "en": "Floor",
         "ru": "Этаж",
         "fr": "Étage"
        },
        "v": {
-        "en": "34th floor",
         "he": "קומה 34",
+        "en": "34th floor",
         "ru": "34-й этаж",
         "fr": "34e étage"
        }
       },
       {
        "l": {
-        "en": "Interior Area",
         "he": "שטח פנים",
+        "en": "Interior Area",
         "ru": "Внутренняя площадь",
         "fr": "Surface intérieure"
        },
        "v": {
-        "en": "214 sqm of refined living space",
         "he": "214 מ״ר של מרחב מגורים מעודן",
+        "en": "214 sqm of refined living space",
         "ru": "214 м² изысканного жилого пространства",
         "fr": "214 m² d'espace de vie raffiné"
        }
       },
       {
        "l": {
-        "en": "Terrace",
         "he": "מרפסת",
+        "en": "Terrace",
         "ru": "Терраса",
         "fr": "Terrasse"
        },
        "v": {
-        "en": "49 sqm sun terrace facing the sea",
         "he": "מרפסת שמש 49 מ״ר הפונה לים",
+        "en": "49 sqm sun terrace facing the sea",
         "ru": "Солнечная терраса 49 м² с видом на море",
         "fr": "Terrasse ensoleillée de 49 m² face à la mer"
        }
       },
       {
        "l": {
-        "en": "Layout",
         "he": "תכנון",
+        "en": "Layout",
         "ru": "Планировка",
         "fr": "Agencement"
        },
        "v": {
-        "en": "6 spacious, light-filled rooms",
         "he": "6 חדרים מרווחים ומוארים",
+        "en": "6 spacious, light-filled rooms",
         "ru": "6 просторных светлых комнат",
         "fr": "6 pièces spacieuses et lumineuses"
        }
       },
       {
        "l": {
-        "en": "Orientation",
         "he": "כיווני אוויר",
+        "en": "Orientation",
         "ru": "Ориентация",
         "fr": "Orientation"
        },
        "v": {
-        "en": "Prime frontline sea exposure",
         "he": "חשיפה מובחרת לים בקו ראשון",
+        "en": "Prime frontline sea exposure",
         "ru": "Престижная первая линия у моря",
         "fr": "Première ligne face à la mer"
        }
       },
       {
        "l": {
-        "en": "Amenities",
         "he": "שירותים",
+        "en": "Amenities",
         "ru": "Удобства",
         "fr": "Équipements"
        },
        "v": {
-        "en": "2 private parking spaces + storage room",
         "he": "2 חניות פרטיות + חדר מחסן",
+        "en": "2 private parking spaces + storage room",
         "ru": "2 частных парковочных места + кладовая",
         "fr": "2 places de parking privées + cellier"
        }
