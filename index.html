@@ -84,7 +84,7 @@ input{width:100%;padding:13px 14px;background:#17171c;border:1px solid #c9a24b40
 .sel{color:var(--g2);min-height:26px}.msg{margin-top:16px;font-size:14px}.msg.err{color:#e28b8b}
 footer{padding:36px 20px calc(36px + env(safe-area-inset-bottom));text-align:center;color:var(--m);font-size:13px;border-top:1px solid #c9a24b30}
 /* inner pages */
-.pg{padding-top:96px;min-height:100vh;position:relative;background:#0c0c0fe6;isolation:isolate}
+.pg{padding-top:96px;min-height:100vh}
 .ph{position:relative;padding:90px 0 60px;text-align:center;overflow:hidden}.ph::before{content:"";position:absolute;inset:0;background:var(--bg) var(--im) center/cover;opacity:.25;filter:blur(3px)}.ph .wrap{position:relative}
 .ph small{color:var(--g);letter-spacing:.3em;font-size:12px}.ph h1{font-size:clamp(26px,4.6vw,48px);margin:14px 0}.ph .pr{font-size:34px;margin-top:18px}
 .back{display:inline-block;margin:20px 0;color:var(--g);cursor:pointer;letter-spacing:.15em;font-size:13px}
@@ -207,28 +207,40 @@ body::after{animation:none;inset:0;opacity:.05}
 .menu{clip-path:circle(0 at calc(100% - 39px) 30px)}.menu.o{clip-path:circle(150vmax at calc(100% - 39px) 30px)}}
 @media(hover:none){.card:hover{transform:none;box-shadow:none;border-color:#c9a24b30}.card:hover .im img{transform:none}.btn:not(.f):hover{color:var(--g2)}.btn:not(.f):hover::before{transform:translateX(-101%)}.fab a:hover{background:#0a0a0cd9;transform:none}.fab a:hover svg{fill:var(--g2)}.gal img:hover{filter:none}#lgb:hover{background:#0a0a0ccc;color:var(--g2)}}
 
-/* ===== iOS / WEBKIT COMPATIBILITY ===== */
+/* ===== iOS / WEBKIT COMPATIBILITY (v2) ===== */
+/* ROOT CAUSE of the hidden video: body had an opaque background on iOS, which painted
+   over the fixed z-index:-1 video layer. Body must stay transparent; html holds the dark base. */
+html{background:#050506}
+body{background:transparent}
+.bgv{top:0;left:0;right:0;bottom:0;width:100%;height:100vh;height:100lvh;-webkit-transform:translateZ(0);transform:translateZ(0)}
+.bgv video{-webkit-backface-visibility:hidden;backface-visibility:hidden}
 @supports (-webkit-touch-callout:none){
-/* Force fixed/overlay elements onto their own GPU layer so Safari doesn't
-   leave stale ("ghost") frames of them behind during momentum scrolling. */
-/* The constantly-animating film-grain overlay is expensive to repaint on
-   iOS and is a common cause of tearing/ghosting; disable it there. */
+/* heavy CSS filter on <video> can render black / drop frames on iOS */
+.bgv video{filter:none}
+.top,.menu,.lb,.curt{-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.top,.fab,.pb,#lgl,.menu,.lb,.curt{will-change:transform}
+/* animated film-grain overlay is expensive on iOS */
 body::after{display:none}
-/* Blur filters inside entrance animations are costly to composite on iOS
-   and can leave visible artifacts; drop the blur, keep the fade/slide. */
+/* blur inside entrance animations leaves artifacts on iOS */
 @keyframes arc{from{opacity:0;clip-path:inset(0 50% 0 50%)}}
 @keyframes lg{from{opacity:0;transform:scale(1.14) translateY(24px)}}
 @keyframes hd{from{opacity:0;clip-path:inset(0 50% 0 50%)}}
 @keyframes rvi{from{opacity:0;transform:translateY(70px)}}
 .card.in .im img{animation:none}
 .ph::before{animation:none;transform:none}
-/* Momentum-scroll elastic bounce can reveal the fixed video layer's edge;
-   pin the background so it never shows through. */
-html,body{background:#050506}
 }
-/* iOS reports 100vh taller than the visible area (address-bar chrome);
-   use the safer dynamic unit anywhere full-height blocks are used. */
 @supports (height:100dvh){.hero{min-height:100dvh}}
+
+/* ===== IMAGE LAYOUT FIX (Safari resolved height:100% on auto grid rows as the image's
+   natural height, so photos stretched over the text) ===== */
+.two>*{min-width:0}
+.gal{align-items:start}
+.gal img{height:auto;aspect-ratio:4/3;min-height:0;max-height:none;object-fit:cover}
+.gal img:first-child{aspect-ratio:16/10;max-height:520px}
+.card .im{position:relative}
+.card .im img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+.viewer{position:relative}
+.viewer img{position:absolute;top:0;left:0;width:100%;height:100%;max-height:none;object-fit:contain}
 </style>
 </head>
 <body>
@@ -277,10 +289,13 @@ const PR=[30,31,32,33,34,35,36];
 $('#armon').src=IMG[2];$('#yp').src=IMG[1];
 $('#cards').innerHTML=P.map((p,n)=>`<article class="card rv"><div class="im"><img src="${IMG[p.cover]}" alt="${p.t}"></div><div class="b"><div class="c">${p.cap}</div><div class="pr gold">${p.price} ₪</div><a class="btn" data-go="#/property/${n+1}">View Full Details</a></div></article>`).join('');
 /* video background */
-const V=[$('#v1'),$('#v2')];[1,2].forEach(n=>{V[n-1].poster=VID['p'+n];V[n-1].src=VID[n]});
+function blobURL(d){try{const c=d.indexOf(','),m=d.slice(5,d.indexOf(';')),b=atob(d.slice(c+1)),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return URL.createObjectURL(new Blob([u],{type:m}))}catch(e){return d}}
+const V=[$('#v1'),$('#v2')];[1,2].forEach(n=>{const v=V[n-1];v.muted=true;v.setAttribute('muted','');v.poster=VID['p'+n];v.src=blobURL(VID[n]);v.load()});
 function bg(n){V.forEach((v,i)=>{if(i===n){v.classList.add('on');v.play().catch(()=>{})}else{v.classList.remove('on');setTimeout(()=>{if(!v.classList.contains('on'))v.pause()},2500)}})}
 V.forEach(v=>{v.muted=true;v.defaultMuted=true;v.setAttribute('webkit-playsinline','')});bg(0);
-addEventListener('touchstart',()=>V.forEach(v=>v.classList.contains('on')&&v.play().catch(()=>{})),{once:true,passive:true});
+const kick=()=>V.forEach(v=>v.classList.contains('on')&&v.paused&&v.play().catch(()=>{}));
+['touchstart','touchend','click','scroll'].forEach(ev=>addEventListener(ev,kick,{passive:true}));
+document.addEventListener('visibilitychange',kick);V.forEach(v=>v.addEventListener('canplay',kick));
 const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)bg(+e.target.dataset.bg)}),{rootMargin:'-45% 0px -45% 0px'});
 [['.hero',0],['#properties',1],['#about',0],['#book',1]].forEach(([s,n])=>{const e=$(s);e.dataset.bg=n;so.observe(e)});
 /* routing */
